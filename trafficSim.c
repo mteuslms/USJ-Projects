@@ -221,33 +221,10 @@ int rollDice(int numRange) {
 
 // nelson
 void get_simulation_settings(int *num_cycles, int *cycles_per_second) {
-    char input_buffer[100];  // Buffer to store user input
+    printf("Enter the number of cycles to run: ");
+    scanf("%d", num_cycles);
 
-    // Get number of cycles
-    while (1) {
-        printf("Enter the number of cycles to run: ");
-        fgets(input_buffer, sizeof(input_buffer), stdin);
-
-        // Validate input
-        if (sscanf(input_buffer, "%d", num_cycles) == 1 && *num_cycles > 0) {
-            break;  // Valid input
-        } else {
-            printf("Invalid input. Please enter a positive integer.\n");
-        }
-    }
-
-    // Get cycles per second
-    while (1) {
-        printf("Enter the number of cycles per second: ");
-        fgets(input_buffer, sizeof(input_buffer), stdin);
-
-        // Validate input
-        if (sscanf(input_buffer, "%d", cycles_per_second) == 1 && *cycles_per_second > 0) {
-            break;  // Valid input
-        } else {
-            printf("Invalid input. Please enter a positive integer.\n");
-        }
-    }
+    printf("Enter the number of cycles per second: ");
+    scanf("%d", cycles_per_second);
 }
-
 
